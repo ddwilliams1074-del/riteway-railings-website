@@ -147,6 +147,40 @@
       <button class="lightbox-close" aria-label="Close">&times;</button>
       <img src="" alt="">
     </div>
+
+    <section class="section area-section">
+      <div class="container">
+        <p class="label reveal">Service Area</p>
+        <h2 class="reveal">Proudly serving the Edmonton area</h2>
+        <ul class="area-list reveal">
+          <li>Edmonton</li><li>Beaumont</li><li>Sherwood Park</li><li>Spruce Grove</li><li>Devon</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <p class="label">Get In Touch</p>
+          <h2>Request a free quote</h2>
+          <p>Tell us about your project and we'll get back to you with a custom quote.</p>
+          <ul class="contact-info">
+            <li><strong>Phone</strong><a href="tel:+17809528057">(780) 952-8057</a></li>
+            <li><strong>Email</strong><a href="mailto:info@ritewayrailings.ca">info@ritewayrailings.ca</a></li>
+            <li><strong>Address</strong><span>9147 Cooper Cres SW, Edmonton, AB T6W 3K9</span></li>
+            <li><strong>Hours</strong><span>Mon–Fri 8am–6pm · Sat 10am–4pm · Sun closed</span></li>
+          </ul>
+        </div>
+        <form class="quote-form reveal" action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST">
+          <label>Name<input type="text" name="name" required></label>
+          <label>Phone<input type="tel" name="phone" required></label>
+          <label>Email<input type="email" name="email" required></label>
+          <label>Project details<textarea name="message" rows="4" placeholder="Type of railing, location, approximate length…" required></textarea></label>
+          <button type="submit" class="btn btn-dark">Send Request</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
   </main>
   <footer id="site-footer"></footer>
   <script src="js/main.js" defer></script>

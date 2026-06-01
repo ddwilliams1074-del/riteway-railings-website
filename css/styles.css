@@ -123,6 +123,23 @@ img { max-width: 100%; display: block; }
 .lightbox img { max-width: 92vw; max-height: 88vh; border-radius: 4px; }
 .lightbox-close { position: absolute; top: 1rem; right: 1.5rem; font-size: 2.5rem; line-height: 1; color: #fff; background: none; border: 0; cursor: pointer; }
 
+/* Service area */
+.area-section { background: var(--grey-100); }
+.area-list { list-style: none; padding: 0; margin: 1.5rem 0 0; display: flex; flex-wrap: wrap; gap: .75rem; }
+.area-list li { font-family: var(--display); text-transform: uppercase; font-size: 1.1rem; padding: .5rem 1.1rem; background: var(--white); border: 1px solid var(--grey-300); border-radius: 999px; }
+
+/* Contact + form */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 5vw, 4rem); }
+.contact-info { list-style: none; padding: 0; margin-top: 1.5rem; }
+.contact-info li { padding: .6rem 0; border-bottom: 1px solid var(--grey-300); }
+.contact-info strong { display: block; font-size: .7rem; letter-spacing: .15em; text-transform: uppercase; color: var(--silver); }
+.quote-form { display: grid; gap: 1rem; background: var(--white); padding: 1.8rem; border: 1px solid var(--grey-300); border-radius: var(--radius); }
+.quote-form label { display: grid; gap: .35rem; font-weight: 600; font-size: .85rem; }
+.quote-form input, .quote-form textarea { font: inherit; padding: .7rem .8rem; border: 1px solid var(--grey-300); border-radius: var(--radius); }
+.quote-form input:focus, .quote-form textarea:focus { outline: 2px solid var(--black); outline-offset: 1px; }
+.form-status { font-size: .85rem; margin: 0; }
+@media (max-width: 880px) { .contact-grid { grid-template-columns: 1fr; } }
+
 /* Scroll reveal */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.in { opacity: 1; transform: none; }

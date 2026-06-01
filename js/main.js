@@ -32,3 +32,24 @@ if (lb) {
   lb.addEventListener('click', (e) => { if (e.target !== lbImg) close(); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
 }
+
+// Quote form async submit
+const form = document.querySelector('.quote-form');
+if (form) {
+  const status = form.querySelector('.form-status');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.textContent = 'Sending…';
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
+      if (res.ok) { form.reset(); status.textContent = 'Thanks! We’ll be in touch shortly.'; }
+      else { status.textContent = 'Something went wrong — please call (780) 952-8057.'; }
+    } catch {
+      status.textContent = 'Something went wrong — please call (780) 952-8057.';
+    }
+  });
+}

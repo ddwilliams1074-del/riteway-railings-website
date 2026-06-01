@@ -113,6 +113,16 @@ img { max-width: 100%; display: block; }
 .why-photo img { border-radius: var(--radius); object-fit: cover; width: 100%; aspect-ratio: 4/5; }
 @media (max-width: 880px) { .steps, .why-grid { grid-template-columns: 1fr; } }
 
+/* Gallery + lightbox */
+.gallery-section { background: var(--black); color: var(--white); }
+.gallery { columns: 3 240px; column-gap: 12px; margin-top: 2.5rem; }
+.gallery img { width: 100%; margin-bottom: 12px; border-radius: 4px; cursor: zoom-in; filter: grayscale(.15); transition: filter .25s, transform .25s; break-inside: avoid; }
+.gallery img:hover { filter: none; transform: scale(1.01); }
+.lightbox { position: fixed; inset: 0; z-index: 100; display: none; align-items: center; justify-content: center; background: rgba(0,0,0,.92); padding: 2rem; }
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 92vw; max-height: 88vh; border-radius: 4px; }
+.lightbox-close { position: absolute; top: 1rem; right: 1.5rem; font-size: 2.5rem; line-height: 1; color: #fff; background: none; border: 0; cursor: pointer; }
+
 /* Scroll reveal */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.in { opacity: 1; transform: none; }

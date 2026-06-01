@@ -140,6 +140,15 @@ img { max-width: 100%; display: block; }
 .form-status { font-size: .85rem; margin: 0; }
 @media (max-width: 880px) { .contact-grid { grid-template-columns: 1fr; } }
 
+/* Footer */
+#site-footer { background: var(--black); color: var(--grey-300); padding-top: 3.5rem; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; }
+.footer-logo { height: 40px; width: auto; margin-bottom: 1rem; }
+#site-footer h4 { font-family: var(--body); font-weight: 700; text-transform: uppercase; letter-spacing: .12em; font-size: .8rem; color: var(--white); margin: 0 0 .8rem; }
+#site-footer a:hover { color: var(--white); }
+.footer-bottom { border-top: 1px solid #1f1f1f; margin-top: 2.5rem; padding-block: 1.4rem; font-size: .8rem; }
+@media (max-width: 880px) { .footer-grid { grid-template-columns: 1fr; } }
+
 /* Scroll reveal */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.in { opacity: 1; transform: none; }

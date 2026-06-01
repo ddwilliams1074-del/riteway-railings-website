@@ -57,3 +57,15 @@ if (form) {
 // Footer year
 const yr = document.getElementById('year');
 if (yr) yr.textContent = new Date().getFullYear();
+
+// Scroll reveals. Hero reveals animate on load via CSS (their .hero .reveal rule
+// keeps them visible regardless), so observing them here is harmless.
+const reveals = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window && reveals.length) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { threshold: 0.12 });
+  reveals.forEach((el) => io.observe(el));
+} else {
+  reveals.forEach((el) => el.classList.add('in'));
+}

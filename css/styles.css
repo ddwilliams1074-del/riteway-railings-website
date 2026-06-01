@@ -67,6 +67,20 @@ img { max-width: 100%; display: block; }
   .nav-links.open { transform: none; }
 }
 
+/* Hero */
+.hero { position: relative; background: var(--black); color: var(--white); overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background: url("../images/aluminum-glass-privacy-railing-balcony-edmonton.jpg") center/cover no-repeat; opacity: .28; filter: grayscale(1) contrast(1.05); }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,10,.4), rgba(10,10,10,.85)); }
+.hero-inner { position: relative; z-index: 1; padding-block: clamp(4.5rem, 14vw, 9rem); max-width: 60rem; }
+.hero-sub { font-size: clamp(1.05rem, 2vw, 1.3rem); color: var(--grey-300); max-width: 38rem; margin-top: 1.25rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 2rem; }
+.hero .reveal { animation: heroIn .7s ease backwards; opacity: 1; transform: none; }
+.hero .label.reveal { animation-delay: .05s; }
+.hero h1.reveal { animation-delay: .15s; }
+.hero .hero-sub.reveal { animation-delay: .3s; }
+.hero .hero-cta.reveal { animation-delay: .45s; }
+@keyframes heroIn { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
+
 /* Scroll reveal */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.in { opacity: 1; transform: none; }

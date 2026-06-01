@@ -24,8 +24,11 @@ body {
   background: var(--white);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  /* Guard against any element pushing past the viewport so both side gutters
+     stay equal on every screen. `clip` (not `hidden`) keeps the sticky header working. */
+  overflow-x: clip;
 }
-h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.02; letter-spacing: .01em; text-transform: uppercase; margin: 0; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.02; letter-spacing: .01em; text-transform: uppercase; margin: 0; overflow-wrap: break-word; }
 h1 { font-size: clamp(2.6rem, 7vw, 5.5rem); }
 h2 { font-size: clamp(2rem, 5vw, 3.5rem); }
 h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); }

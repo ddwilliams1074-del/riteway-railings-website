@@ -191,11 +191,16 @@ img { max-width: 100%; display: block; }
 }
 
 /* Category gallery pages */
-.page-hero .hero-inner { padding-block: clamp(2.75rem, 9vw, 5rem); max-width: 52rem; }
+.page-hero .hero-inner { padding-block: clamp(2.75rem, 9vw, 5rem) clamp(4.25rem, 12vw, 6.5rem); max-width: 52rem; }
 .crumb { font-size: .85rem; color: var(--grey-300); margin-bottom: 1rem; letter-spacing: .02em; }
 .crumb a { color: var(--silver); }
 .crumb a:hover { color: var(--white); }
 .crumb span { margin: 0 .4rem; color: var(--grey-700); }
+/* Scroll-down cue at the bottom of the gallery-page hero */
+.scroll-cue { position: absolute; left: 50%; bottom: 1.1rem; transform: translateX(-50%); z-index: 2; display: inline-flex; padding: .6rem; }
+.scroll-cue-arrow { display: block; width: 16px; height: 16px; border-right: 2px solid var(--white); border-bottom: 2px solid var(--white); transform: rotate(45deg); opacity: .9; filter: drop-shadow(0 1px 3px rgba(0,0,0,.7)); animation: scrollCueFlash 1.8s ease-in-out infinite; }
+@keyframes scrollCueFlash { 0%, 100% { opacity: .15; } 50% { opacity: 1; } }
+
 .contact-cta { background: var(--ink); color: var(--white); text-align: center; }
 .contact-cta-inner { max-width: 40rem; margin-inline: auto; }
 .contact-cta-inner p { color: var(--grey-300); }

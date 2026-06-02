@@ -45,6 +45,7 @@ const pages = [
     intro: 'Aluminum privacy walls and panels that block wind and shield your deck or balcony from view — without closing it in. Frosted or tinted glass and solid infill options, powder-coated to match your railings.',
     galleryHeading: 'Privacy wall projects in Edmonton',
     galleryIntro: 'Recent privacy wall and screen installs around Edmonton — wind-blocking panels that add seclusion while keeping a clean, modern look. Tap any photo to enlarge.',
+    heroImage: 'images/privacy-walls/privacy-wall-edmonton-07.jpg',
     alt: 'Aluminum privacy wall project in Edmonton',
   },
 ];
@@ -92,7 +93,7 @@ const page = (p) => `<!DOCTYPE html>
   <meta property="og:title" content="${p.h1} Edmonton | Riteway Railings">
   <meta property="og:description" content="${p.description}">
   <meta property="og:url" content="${p.canonical}">
-  <meta property="og:image" content="https://ritewayrailings.ca/${manifest[p.manifestKey][0].src}">
+  <meta property="og:image" content="https://ritewayrailings.ca/${p.heroImage || manifest[p.manifestKey][0].src}">
   <meta property="og:locale" content="en_CA">
   <meta name="twitter:card" content="summary_large_image">
   <!-- PREVIEW MODE: keeps the GitHub Pages staging site out of Google.
@@ -117,7 +118,7 @@ ${nav(p.nav)}
   </header>
   <main>
     <section class="hero page-hero" id="hero">
-      <div class="hero-bg" aria-hidden="true" style="background-image:url('${manifest[p.manifestKey][0].src}')"></div>
+      <div class="hero-bg" aria-hidden="true" style="background-image:url('${p.heroImage || manifest[p.manifestKey][0].src}')"></div>
       <div class="container hero-inner">
         <nav class="crumb reveal" aria-label="Breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> ${p.h1}</nav>
         <h1 class="reveal">${p.h1}</h1>
@@ -128,6 +129,9 @@ ${nav(p.nav)}
           <a href="sms:+17809528057" class="btn btn-ghost">Text (780) 952-8057</a>
         </div>
       </div>
+      <a class="scroll-cue" href="#gallery" aria-label="Scroll down to the gallery">
+        <span class="scroll-cue-arrow"></span>
+      </a>
     </section>
 
     <section class="section gallery-section" id="gallery">

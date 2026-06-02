@@ -72,8 +72,8 @@ img { max-width: 100%; display: block; }
 
 /* Hero */
 .hero { position: relative; background: var(--black); color: var(--white); overflow: hidden; }
-.hero-bg { position: absolute; inset: 0; background: url("../images/aluminum-glass-privacy-railing-balcony-edmonton.jpg") center/cover no-repeat; opacity: .28; filter: grayscale(1) contrast(1.05); }
-.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,10,.4), rgba(10,10,10,.85)); }
+.hero-bg { position: absolute; inset: 0; background: url("../images/aluminum-glass-privacy-railing-balcony-edmonton.jpg") center/cover no-repeat; opacity: .62; filter: grayscale(.35) contrast(1.05); }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,10,.3), rgba(10,10,10,.72)); }
 .hero-inner { position: relative; z-index: 1; padding-block: clamp(4.5rem, 14vw, 9rem); max-width: 60rem; }
 .hero-sub { font-size: clamp(1.05rem, 2vw, 1.3rem); color: var(--grey-300); max-width: 38rem; margin-top: 1.25rem; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 2rem; }

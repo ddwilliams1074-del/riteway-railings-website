@@ -58,6 +58,22 @@ if (form) {
 const yr = document.getElementById('year');
 if (yr) yr.textContent = new Date().getFullYear();
 
+// Hero "RITE-WAY" pop — animate on load and replay each time it scrolls into view.
+const heroWord = document.querySelector('.hero h1 .chrome-text');
+if (heroWord && 'IntersectionObserver' in window) {
+  const popIo = new IntersectionObserver((entries) => {
+    entries.forEach((en) => {
+      if (en.isIntersecting) {
+        // Restart the CSS animation by toggling the class off/on.
+        heroWord.classList.remove('pop');
+        void heroWord.offsetWidth; // force reflow so the animation can replay
+        heroWord.classList.add('pop');
+      }
+    });
+  }, { threshold: 0.6 });
+  popIo.observe(heroWord);
+}
+
 // Scroll reveals. Hero reveals animate on load via CSS (their .hero .reveal rule
 // keeps them visible regardless), so observing them here is harmless.
 const reveals = document.querySelectorAll('.reveal');

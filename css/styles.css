@@ -156,6 +156,39 @@ img { max-width: 100%; display: block; }
 .footer-bottom { border-top: 1px solid #1f1f1f; margin-top: 2.5rem; padding-block: 1.4rem; font-size: .8rem; }
 @media (max-width: 880px) { .footer-grid { grid-template-columns: 1fr; } }
 
+/* Clickable service cards (link to category pages) */
+.card-link { display: block; color: inherit; height: 100%; }
+.card-cta { display: inline-block; margin-top: .6rem; font-weight: 700; font-size: .9rem; color: var(--black); }
+.card:hover .card-cta { text-decoration: underline; }
+
+/* Current-page nav highlight */
+.nav-links a.is-current { color: var(--white); }
+
+/* Hero "RITE-WAY" pop — pops on load and replays when scrolled back into view.
+   Without JS the word stays fully visible (no .pop class is added). */
+.hero h1 .chrome-text { display: inline-block; transform-origin: 50% 60%; }
+.js .hero h1 .chrome-text.pop { animation: chromePop .85s cubic-bezier(.2,.75,.25,1.45) both; }
+@keyframes chromePop {
+  0%   { opacity: 0; transform: scale(.35) translateY(.05em); filter: blur(3px); }
+  55%  { opacity: 1; transform: scale(1.14); filter: blur(0); }
+  72%  { transform: scale(.97); }
+  100% { transform: scale(1); }
+}
+
+/* Category gallery pages */
+.page-hero .hero-inner { padding-block: clamp(2.75rem, 9vw, 5rem); max-width: 52rem; }
+.crumb { font-size: .85rem; color: var(--grey-300); margin-bottom: 1rem; letter-spacing: .02em; }
+.crumb a { color: var(--silver); }
+.crumb a:hover { color: var(--white); }
+.crumb span { margin: 0 .4rem; color: var(--grey-700); }
+.contact-cta { background: var(--ink); color: var(--white); text-align: center; }
+.contact-cta-inner { max-width: 40rem; margin-inline: auto; }
+.contact-cta-inner p { color: var(--grey-300); }
+.contact-cta .hero-cta { justify-content: center; margin-top: 1.75rem; }
+
+/* Mobile: shorten the "Why Riteway" photo so it doesn't fill the screen */
+@media (max-width: 880px) { .why-photo img { aspect-ratio: 16 / 10; } }
+
 /* Scroll reveal — progressive enhancement.
    No-JS / JS-failure: content is fully visible (default below).
    With JS (html.js): elements start hidden and reveal on scroll. */

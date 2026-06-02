@@ -23,7 +23,8 @@ so Google does not index the staging site.
       For Web3Forms instead: set `action="https://api.web3forms.com/submit"` and add
       `<input type="hidden" name="access_key" value="...">`.
 - [ ] **Search indexing:** change `<meta name="robots" content="noindex, nofollow">`
-      back to `index, follow`.
+      back to `index, follow` in **all four pages**: `index.html`, `aluminum-railing.html`,
+      `glass-railing.html`, `privacy-walls.html`.
 - [ ] **Canonical/OG/sitemap** already point to `https://ritewayrailings.ca/` — confirm the
       domain matches once DNS is pointed.
 - [ ] Submit `sitemap.xml` in Google Search Console for the live domain.
@@ -31,5 +32,7 @@ so Google does not index the staging site.
 ## Regenerating assets (optional, dev only)
 
 - Optimized photos: `node tools/optimize-images.mjs`
+- Gallery-page photos (from `Brand Assets/source-photos/`) + rebuild the three
+  category pages: `node tools/optimize-gallery-images.mjs && node tools/build-pages.mjs`
 - Favicons from `favicon.svg`: `node tools/gen-favicons.mjs`
   (requires `npm install --no-save sharp png-to-ico`)

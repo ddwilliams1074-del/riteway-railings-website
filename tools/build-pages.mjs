@@ -19,6 +19,7 @@ const pages = [
     intro: 'Picket and glass-infill aluminum railings for decks, stairs, and balconies — any height, modular or fully welded, in thicker-wall aluminum built to last the Edmonton seasons. Powder-coated in black, white, beige, yard bronze, or a custom colour.',
     galleryHeading: 'Aluminum railing projects in Edmonton',
     galleryIntro: 'A look at recent aluminum railing installs across the Edmonton area — decks, stairs, and balconies in picket and glass-infill styles. Tap any photo to enlarge.',
+    heroImage: 'images/aluminum-railing/aluminum-railing-edmonton-14.jpg',
     alt: 'Custom aluminum railing project in Edmonton',
   },
   {

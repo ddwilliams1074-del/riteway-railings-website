@@ -18,6 +18,7 @@ const pages = [
     h1: 'Aluminum Railing',
     intro: 'Picket and glass-infill aluminum railings for decks, stairs, and balconies — any height, modular or fully welded, in thicker-wall aluminum built to last the Edmonton seasons. Powder-coated in black, white, beige, yard bronze, or a custom colour.',
     galleryHeading: 'Aluminum railing projects in Edmonton',
+    galleryIntro: 'A look at recent aluminum railing installs across the Edmonton area — decks, stairs, and balconies in picket and glass-infill styles. Tap any photo to enlarge.',
     alt: 'Custom aluminum railing project in Edmonton',
   },
   {
@@ -30,6 +31,7 @@ const pages = [
     h1: 'Glass Railing',
     intro: 'Aluminum-framed glass railings that open up the view while keeping a clean, modern edge. Choose pinhead, raindrop, bronze, tint, or grey-tint glass — measured and cut for each deck, stair, and balcony.',
     galleryHeading: 'Glass railing projects in Edmonton',
+    galleryIntro: 'Recent aluminum-framed glass railing projects around Edmonton — open, unobstructed views with a clean, modern edge. Tap any photo to enlarge.',
     alt: 'Aluminum-framed glass railing project in Edmonton',
   },
   {
@@ -42,6 +44,7 @@ const pages = [
     h1: 'Privacy Walls',
     intro: 'Aluminum privacy walls and panels that block wind and shield your deck or balcony from view — without closing it in. Frosted or tinted glass and solid infill options, powder-coated to match your railings.',
     galleryHeading: 'Privacy wall projects in Edmonton',
+    galleryIntro: 'Recent privacy wall and screen installs around Edmonton — wind-blocking panels that add seclusion while keeping a clean, modern look. Tap any photo to enlarge.',
     alt: 'Aluminum privacy wall project in Edmonton',
   },
 ];
@@ -63,7 +66,9 @@ ${navItem(active, 'privacy', 'privacy-walls.html', 'Privacy Walls')}
 const galleryImgs = (key, alt) =>
   manifest[key]
     .map((img, i) =>
-      `          <img src="${img.src}" alt="${alt} — photo ${i + 1}" loading="lazy" width="${img.w}" height="${img.h}">`
+      `          <button type="button" class="g-item" aria-label="Enlarge photo ${i + 1} of ${manifest[key].length}">
+            <img src="${img.src}" alt="${alt} — photo ${i + 1}" loading="lazy" width="${img.w}" height="${img.h}">
+          </button>`
     )
     .join('\n');
 
@@ -129,14 +134,18 @@ ${nav(p.nav)}
       <div class="container">
         <p class="label reveal">Our Work</p>
         <h2 class="reveal">${p.galleryHeading}</h2>
+        <p class="gallery-intro reveal">${p.galleryIntro}</p>
         <div class="gallery reveal">
 ${galleryImgs(p.manifestKey, p.alt)}
         </div>
       </div>
     </section>
-    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image viewer">
       <button class="lightbox-close" aria-label="Close">&times;</button>
+      <button class="lightbox-nav lightbox-prev" aria-label="Previous photo">&#8249;</button>
       <img src="" alt="">
+      <button class="lightbox-nav lightbox-next" aria-label="Next photo">&#8250;</button>
+      <p class="lightbox-count" aria-live="polite"></p>
     </div>
 
     <section class="section contact-cta">

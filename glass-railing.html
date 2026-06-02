@@ -69,21 +69,41 @@
       <div class="container">
         <p class="label reveal">Our Work</p>
         <h2 class="reveal">Glass railing projects in Edmonton</h2>
+        <p class="gallery-intro reveal">Recent aluminum-framed glass railing projects around Edmonton — open, unobstructed views with a clean, modern edge. Tap any photo to enlarge.</p>
         <div class="gallery reveal">
-          <img src="images/glass-railing/glass-railing-edmonton-01.jpg" alt="Aluminum-framed glass railing project in Edmonton — photo 1" loading="lazy" width="1100" height="1467">
-          <img src="images/glass-railing/glass-railing-edmonton-02.jpg" alt="Aluminum-framed glass railing project in Edmonton — photo 2" loading="lazy" width="1100" height="825">
-          <img src="images/glass-railing/glass-railing-edmonton-03.jpg" alt="Aluminum-framed glass railing project in Edmonton — photo 3" loading="lazy" width="1100" height="825">
-          <img src="images/glass-railing/glass-railing-edmonton-04.jpg" alt="Aluminum-framed glass railing project in Edmonton — photo 4" loading="lazy" width="1100" height="1467">
-          <img src="images/glass-railing/glass-railing-edmonton-05.jpg" alt="Aluminum-framed glass railing project in Edmonton — photo 5" loading="lazy" width="1100" height="825">
-          <img src="images/glass-railing/glass-railing-edmonton-06.jpg" alt="Aluminum-framed glass railing project in Edmonton — photo 6" loading="lazy" width="1100" height="825">
-          <img src="images/glass-railing/glass-railing-edmonton-07.jpg" alt="Aluminum-framed glass railing project in Edmonton — photo 7" loading="lazy" width="1100" height="825">
-          <img src="images/glass-railing/glass-railing-edmonton-08.jpg" alt="Aluminum-framed glass railing project in Edmonton — photo 8" loading="lazy" width="1100" height="1467">
+          <button type="button" class="g-item" aria-label="Enlarge photo 1 of 8">
+            <img src="images/glass-railing/glass-railing-edmonton-01.jpg" alt="Aluminum-framed glass railing project in Edmonton — photo 1" loading="lazy" width="1100" height="1467">
+          </button>
+          <button type="button" class="g-item" aria-label="Enlarge photo 2 of 8">
+            <img src="images/glass-railing/glass-railing-edmonton-02.jpg" alt="Aluminum-framed glass railing project in Edmonton — photo 2" loading="lazy" width="1100" height="825">
+          </button>
+          <button type="button" class="g-item" aria-label="Enlarge photo 3 of 8">
+            <img src="images/glass-railing/glass-railing-edmonton-03.jpg" alt="Aluminum-framed glass railing project in Edmonton — photo 3" loading="lazy" width="1100" height="825">
+          </button>
+          <button type="button" class="g-item" aria-label="Enlarge photo 4 of 8">
+            <img src="images/glass-railing/glass-railing-edmonton-04.jpg" alt="Aluminum-framed glass railing project in Edmonton — photo 4" loading="lazy" width="1100" height="1467">
+          </button>
+          <button type="button" class="g-item" aria-label="Enlarge photo 5 of 8">
+            <img src="images/glass-railing/glass-railing-edmonton-05.jpg" alt="Aluminum-framed glass railing project in Edmonton — photo 5" loading="lazy" width="1100" height="825">
+          </button>
+          <button type="button" class="g-item" aria-label="Enlarge photo 6 of 8">
+            <img src="images/glass-railing/glass-railing-edmonton-06.jpg" alt="Aluminum-framed glass railing project in Edmonton — photo 6" loading="lazy" width="1100" height="825">
+          </button>
+          <button type="button" class="g-item" aria-label="Enlarge photo 7 of 8">
+            <img src="images/glass-railing/glass-railing-edmonton-07.jpg" alt="Aluminum-framed glass railing project in Edmonton — photo 7" loading="lazy" width="1100" height="825">
+          </button>
+          <button type="button" class="g-item" aria-label="Enlarge photo 8 of 8">
+            <img src="images/glass-railing/glass-railing-edmonton-08.jpg" alt="Aluminum-framed glass railing project in Edmonton — photo 8" loading="lazy" width="1100" height="1467">
+          </button>
         </div>
       </div>
     </section>
-    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image viewer">
       <button class="lightbox-close" aria-label="Close">&times;</button>
+      <button class="lightbox-nav lightbox-prev" aria-label="Previous photo">&#8249;</button>
       <img src="" alt="">
+      <button class="lightbox-nav lightbox-next" aria-label="Next photo">&#8250;</button>
+      <p class="lightbox-count" aria-live="polite"></p>
     </div>
 
     <section class="section contact-cta">

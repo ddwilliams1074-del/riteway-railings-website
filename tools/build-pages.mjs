@@ -50,6 +50,7 @@ const navItem = (active, key, href, label) =>
   `        <a href="${href}"${active === key ? ' aria-current="page" class="is-current"' : ''}>${label}</a>`;
 
 const nav = (active) => `      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#hero">Home</a>
 ${navItem(active, 'aluminum', 'aluminum-railing.html', 'Aluminum Railing')}
 ${navItem(active, 'glass', 'glass-railing.html', 'Glass Railing')}
 ${navItem(active, 'privacy', 'privacy-walls.html', 'Privacy Walls')}

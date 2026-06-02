@@ -78,9 +78,12 @@ if (heroWord && 'IntersectionObserver' in window) {
 // keeps them visible regardless), so observing them here is harmless.
 const reveals = document.querySelectorAll('.reveal');
 if ('IntersectionObserver' in window && reveals.length) {
+  // threshold 0 = reveal as soon as any part enters the viewport. (A higher
+  // threshold can never be met by elements taller than the viewport — e.g. the
+  // long photo galleries — leaving them stuck invisible.)
   const io = new IntersectionObserver((entries) => {
     entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
-  }, { threshold: 0.12 });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0 });
   reveals.forEach((el) => io.observe(el));
 } else {
   reveals.forEach((el) => el.classList.add('in'));

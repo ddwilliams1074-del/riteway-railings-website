@@ -156,6 +156,7 @@ img { max-width: 100%; display: block; }
 .quote-form input, .quote-form textarea { font: inherit; padding: .7rem .8rem; border: 1px solid var(--grey-300); border-radius: var(--radius); }
 .quote-form input:focus, .quote-form textarea:focus { outline: 2px solid var(--black); outline-offset: 1px; }
 .form-status { font-size: .85rem; margin: 0; }
+.hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 @media (max-width: 880px) { .contact-grid { grid-template-columns: 1fr; } }
 
 /* Footer */

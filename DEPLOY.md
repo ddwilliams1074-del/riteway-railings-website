@@ -18,10 +18,14 @@ so Google does not index the staging site.
 
 ## Go-live checklist (when moving to ritewayrailings.ca)
 
-- [ ] **Quote form:** in `index.html`, replace `REPLACE_WITH_FORM_ID` in the form `action`
-      with the real Formspree form ID (sign up at formspree.io with info@ritewayrailings.ca).
-      For Web3Forms instead: set `action="https://api.web3forms.com/submit"` and add
-      `<input type="hidden" name="access_key" value="...">`.
+- [ ] **Quote form — one-time activation:** the form posts to FormSubmit
+      (`https://formsubmit.co/ajax/info@ritewayrailings.ca` in `index.html`) — free,
+      unlimited, no account. The **first** time the form is submitted, FormSubmit emails
+      `info@ritewayrailings.ca` a confirmation link; click **Activate** once and every
+      future submission is delivered to that inbox, formatted as a table. The destination
+      mailbox must exist and be monitored. To deliver to a different address, change the
+      email in the form `action`. (Spam is filtered by a hidden honeypot field; to also
+      require a captcha, remove the `_captcha` "false" hidden input.)
 - [ ] **Search indexing:** change `<meta name="robots" content="noindex, nofollow">`
       back to `index, follow` in **all four pages**: `index.html`, `aluminum-railing.html`,
       `glass-railing.html`, `privacy-walls.html`.
